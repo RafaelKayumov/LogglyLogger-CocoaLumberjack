@@ -10,7 +10,7 @@
 - (NSDictionary *)logglyFieldsToIncludeInEveryLogStatement;
 @end
 
-@interface LogglyFormatter : NSObject <DDLogFormatter>
+@interface LogglyFormatter : NSObject <TMPLogFormatter>
 @property (nonatomic, assign) BOOL alwaysIncludeRawMessage;
 - (id)initWithLogglyFieldsDelegate:(id<LogglyFieldsDelegate>)delegate;
 @end

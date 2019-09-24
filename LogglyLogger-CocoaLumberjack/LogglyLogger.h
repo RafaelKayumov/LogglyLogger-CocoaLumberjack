@@ -4,10 +4,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <CocoaLumberjack/DDAbstractDatabaseLogger.h>
+#import <CocoaLumberjack/TMPAbstractDatabaseLogger.h>
 
 
-@interface LogglyLogger : DDAbstractDatabaseLogger
+@interface LogglyLogger : TMPAbstractDatabaseLogger
 
 /// NSString used in stringWithFormat when creating the loggly bulk post url. Must contain placeholders for Loggly API key and Loggly tags
 @property (nonatomic, strong) NSString *logglyUrlTemplate;

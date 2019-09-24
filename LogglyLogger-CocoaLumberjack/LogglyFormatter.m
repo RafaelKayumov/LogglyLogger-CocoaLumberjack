@@ -52,7 +52,7 @@
     return self;
 }
 
-- (NSString *)formatLogMessage:(DDLogMessage *)logMessage
+- (NSString *)formatLogMessage:(TMPLogMessage *)logMessage
 {
     // Get the fields that should be included in every log entry.
     NSMutableDictionary *logfields = [NSMutableDictionary dictionaryWithDictionary:[logglyFieldsDelegate logglyFieldsToIncludeInEveryLogStatement]];
@@ -60,10 +60,10 @@
     NSString *logLevel;
     switch (logMessage->_flag)
     {
-        case DDLogFlagError : logLevel = @"error"; break;
-        case DDLogFlagWarning  : logLevel = @"warning"; break;
-        case DDLogFlagInfo  : logLevel = @"info"; break;
-        case DDLogFlagDebug : logLevel = @"debug"; break;
+        case TMPLogFlagError : logLevel = @"error"; break;
+        case TMPLogFlagWarning  : logLevel = @"warning"; break;
+        case TMPLogFlagInfo  : logLevel = @"info"; break;
+        case TMPLogFlagDebug : logLevel = @"debug"; break;
         default             : logLevel = @"verbose"; break;
     }
     [logfields setObjectNilSafe:logLevel forKey:@"loglevel"];

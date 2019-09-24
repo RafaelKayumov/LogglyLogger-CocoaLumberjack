@@ -45,9 +45,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark Overridden methods from DDAbstractDatabaseLogger
+#pragma mark Overridden methods from TMPAbstractDatabaseLogger
 
-- (BOOL)db_log:(DDLogMessage *)logMessage
+- (BOOL)db_log:(TMPLogMessage *)logMessage
 {
     // Return YES if an item was added to the buffer.
     // Return NO if the logMessage was ignored.
